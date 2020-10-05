@@ -26,8 +26,8 @@ var passwordBox = document.querySelector("#pass-final")
 
 var choseLengthCorrectly = function () {
     alert("Please select a password length between 9 and 110 characters.")
- passwordLength = prompt("How many characters would you like your secure password to be? Needs to be between 9 and 110.")
- passwordLengthChecker = Number (passwordLength)
+    passwordLength = prompt("How many characters would you like your secure password to be? Needs to be between 9 and 110.")
+    passwordLengthChecker = Number(passwordLength)
 }
 
 // Function and alert to make sure at least one type of character is selected
@@ -37,5 +37,63 @@ var choseCharList = function () {
     charTypeNumbers = confirm("Would you like to use numbers 0-9?")
     charTypeLowercase = confirm("Would you like to use lowercase characters?")
     charTypeUppercase = confirm("Would you like to use uppercase characters?")
-    
+
+}
+
+// Function to make final chararter list to select from for password generation and returns list completed
+
+var generateFinalCharList = function () {
+
+    if (charTypeSpec === true) {
+        charListFinal += specialChars
+    }
+    if (charTypeNumbers === true) {
+        charListFinal += numChars
+    }
+    if (charTypeLowercase === true) {
+        charListFinal += lowerLetters
+    }
+    if (charTypeUppercase === true) {
+        charListFinal += upperLetters
+    }
+    return charListFinal
+}
+
+
+// Function to create secure password and add password into password div
+
+var generatePass = function () {
+    // event.preventDefault()
+    var pass = ""
+    var charList = generateFinalCharList()
+    for (var i = 0; i < passwordLength; i ++) {
+        pass += charList[Math.floor(Math.random() * charList.length)]
+    }
+    passwordBox.textContent = pass
+}
+
+// Copy secure generated password to Clipboard
+
+var copyText = function () {
+    var copyText = documnet.getElementById("pass-final");
+    var textArea = document.createElement("textarea");
+    textArea.value = copyText.textContent;
+    documnet.body.appendChild(textarea);
+    textArea.select();
+    document.execCommand("Copy");
+    alert("Your awesome secure password has been copied to the clipboard!")
+    textArea.remove();
+}
+
+// When buttons are clicked event listeners
+
+generateButton.addEventListener("click', generatePass)
+copyButton.addEventListener("click", copyText)
+
+//While lops until user selects a charater type
+while (passwordLengthChecker < 9 || passwordLengthChecker > 110) {
+    choseLengthCorrectly()
+}
+while (charTypeLowercase == false && charTypeNumbers == false && charTypeSpec === false) {
+    choseCharList()
 }
