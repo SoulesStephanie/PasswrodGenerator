@@ -87,13 +87,15 @@ var copyText = function () {
 
 // When buttons are clicked event listeners
 
-generateButton.addEventListener("click', generatePass)
+generateButton.addEventListener("click", generatePass)
 copyButton.addEventListener("click", copyText)
 
-//While lops until user selects a charater type
-while (passwordLengthChecker < 9 || passwordLengthChecker > 110) {
+
+// While loops until the user selects a character type
+
+while (passwordLengthChecker < 8 || passwordLengthChecker > 128) {
     choseLengthCorrectly()
 }
-while (charTypeLowercase == false && charTypeNumbers == false && charTypeSpec === false) {
+while (charTypeLowercase == false && charTypeNumbers == false && charTypeSpec == false && charTypeUppercase === false) {
     choseCharList()
 }
