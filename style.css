@@ -12,10 +12,11 @@ h1 {
 }
 
 h2 {
-    color: black;
-    font-size: 40px;
+    color: rgb(175, 33, 140);
+    font-size: 25px;
     padding: 30px 0 20px 15px;
-    border-bottom: 2px solid purple;    
+    border-bottom: 2px solid purple;
+    text-align: center;    
 }
 
 h6 {
@@ -80,19 +81,18 @@ html, body {
 footer,
 .push {
     height: 120px;
-    }
+}
 
 
     footer {
-        margin-top: 7%;
-        width: 100%;
-        text-align: center;
-        background-color: wheat;
-        font-size: 18px;
-        border-top: 5px solid black;
-        color: rgb(82, 42, 175);
-        padding-top: auto;
-
-    }
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+    background-color: wheat;
+    font-size: 25px;
+    border-top: 5px solid black;
+    color: rgb(82, 42, 175);
+    padding-top: 50px;
+}
     
 
