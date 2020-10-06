@@ -29,7 +29,7 @@ body {
     background-color: turquoise;
 }
 
-.password{
+.password {
     border: 4px solid black;
     padding: 30px;
     height: max-content;
@@ -37,7 +37,7 @@ body {
     margin:  30px auto 30 px auto;
 }
 
-.card{
+.card {
     width: 90%;
     max-width: 960px;
     margin: 0 auto;
@@ -46,23 +46,53 @@ body {
     clear: both;
 } 
 
-#btns{
-border-top: none;
-color:yellow;
-cursor: pointer;
-border-radius: 50px ;
+#btns {
+    border-top: none; 
+    color:yellow; 
+    cursor: pointer; 
+    border-radius: 50px ;
 }
 
-#gen{
-margin: 40px 0 40px 25px;
-position: absolute;
- background-color: seagreen;
+#gen {
+    margin: 40px 0 40px 25px;
+    position: absolute;
+    background-color: seagreen;
 }
 
 #copy {
-text-align: center;
-background-color: sienna;
-margin: 45px 45px 45px 0;
+    text-align: center;
+    background-color: sienna;
+    margin: 45px 45px 45px 0;
 }
 
+.wrap {
+    margin-right: auto;
+    margin-left: auto;
+    width: 960px;
+    margin-bottom: -150px;
+    min-height: 100%;
+    }
+
+
+html, body {
+    height: 100%
+}
+footer,
+.push {
+    height: 120px;
+    }
+
+
+    footer {
+        margin-top: 7%;
+        width: 100%;
+        text-align: center;
+        background-color: wheat;
+        font-size: 18px;
+        border-top: 5px solid black;
+        color: rgb(82, 42, 175);
+        padding-top: auto;
+
+    }
+    
 
