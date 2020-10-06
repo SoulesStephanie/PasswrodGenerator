@@ -46,3 +46,23 @@ body {
     clear: both;
 } 
 
+#btns{
+border-top: none;
+color:yellow;
+cursor: pointer;
+border-radius: 50px ;
+}
+
+#gen{
+margin: 40px 0 40px 25px;
+position: absolute;
+ background-color: seagreen;
+}
+
+#copy {
+text-align: center;
+background-color: sienna;
+margin: 45px 45px 45px 0;
+}
+
+
